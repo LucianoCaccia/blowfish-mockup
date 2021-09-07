@@ -1,0 +1,22 @@
+#services {
+  .section-heading {
+    font-size: 44px;
+  }
+}
+
+#services-intro {
+  p.lead {
+    margin-top: 5%;
+    font-size: 34px;
+    line-height: 42px;
+  }
+}
+
+#services-desc {
+  background-color: #e6e8e8;
+
+  p:not(.lead) {
+    font-size: 22px;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,172 @@
+// Mixins
+
+// Bootstrap Button Variant
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Background Cover Mixin
+
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Font Mixins
+
+@mixin serif-font {
+  font-family: "Nunito", "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font {
+  font-family: "Nunito", "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin body-font {
+  font-family: "Nunito", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font {
+  font-family: "Nunito", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // text-transform: uppercase;
+}
+
+@mixin gradient-type1 {
+  background: rgb(52,71,73);
+  background: -moz-linear-gradient(top, rgba(52,71,73,1) 0%, rgba(49,67,71,1) 60%, rgba(47,64,68,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(52,71,73,1) 0%,rgba(49,67,71,1) 60%,rgba(47,64,68,1) 100%);
+  background: linear-gradient(to bottom, rgba(52,71,73,1) 0%,rgba(49,67,71,1) 60%,rgba(47,64,68,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#344749', endColorstr='#2f4044',GradientType=0 );
+}
+
+@mixin gradient-type2 {
+  background: rgb(69,100,103);
+  background: -moz-linear-gradient(top, rgba(69,100,103,1) 0%, rgba(69,100,103,1) 60%, rgba(68,98,102,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(69,100,103,1) 0%,rgba(69,100,103,1) 60%,rgba(68,98,102,1) 100%);
+  background: linear-gradient(to bottom, rgba(69,100,103,1) 0%,rgba(69,100,103,1) 60%,rgba(68,98,102,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#456467', endColorstr='#446266',GradientType=0 );
+}
+
+@mixin gradient-type3 {
+  background: rgb(81,85,89);
+  background: -moz-linear-gradient(top, rgba(81,85,89,1) 0%, rgba(79,82,86,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(81,85,89,1) 0%,rgba(79,82,86,1) 100%);
+  background: linear-gradient(to bottom, rgba(81,85,89,1) 0%,rgba(79,82,86,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515559', endColorstr='#4f5256',GradientType=0 );
+}
+
+// All sides border-radius
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+// Single corner border-radius
+
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  background-clip: padding-box;
+}

@@ -1,2 +1,0 @@
-# blowfish-mockup
-HTML mockup

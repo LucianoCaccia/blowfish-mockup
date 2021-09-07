@@ -1,0 +1,23 @@
+aside {
+  &.tecnologies,
+  &.cloud-partners {
+    h2 {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    a {
+      margin: 0;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+        height: 75px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

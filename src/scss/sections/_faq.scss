@@ -1,0 +1,85 @@
+section#faq {
+  /*background-color: $theme-secondary;*/
+  background-color: #519292;
+  color: $gray-lighter;
+
+  h2 {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 38px;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 22px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  a:hover {
+    color: $theme-primary;
+  }
+
+  a.btn-xl {
+    background-color: #c6c6c6;
+    border: 0;
+    color: #333;
+    &:hover {
+      color: #000;
+      background-color: #dcdcdc;
+    }
+  }
+}
+
+
+.fliud.nav-background {
+   background-color: #333;
+   padding-top: 90px;
+}
+
+section#faq-page {
+  /*background-color: $theme-secondary;*/
+  /*color: $gray-lighter;*/
+
+  .nav-backgroud {
+      background-color: #222222;
+      padding: 45px 0;
+  }
+
+  h2 {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 38px;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 22px;
+    color: #333;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  a:hover {
+    color: $theme-primary;
+  }
+
+  a.btn-xl {
+    background-color: #c6c6c6;
+    border: 0;
+    &:hover {
+      color: #333;
+    }
+  }
+
+}

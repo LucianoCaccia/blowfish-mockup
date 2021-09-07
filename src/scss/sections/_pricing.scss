@@ -1,0 +1,89 @@
+section#pricing {
+  .section-heading {
+    @extend .text-normal;
+        margin: 0px 0px 8px 0px;
+        line-height: 1.2;
+  }
+  .check-mark {width: 12%;}
+  .prices.m-b-sm {margin-bottom: 0px;}
+  p.table-foot {margin: 0px;}
+  .section-subheading {
+    font-weight: 400;
+    margin-top: 0;
+  }
+  h1.section-subheading {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .prices {
+    .c {
+      margin: 0;
+      padding: 10px;
+      color: $theme-secondary;
+      font-weight: 300;
+    }
+    h2.th {
+      background-color: #2f4241;
+      font-weight: 300;
+      white-space: nowrap;
+      font-size: 35px;
+    }
+    h3.th {
+      background-color: #435454;
+      color: $theme-primary;
+      font-size: 27px;
+      white-space: nowrap;
+      font-weight: 700;
+      small {
+        color: $theme-primary;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+    }
+    p.td {
+      background-color: $gray-lighter;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      color: $gray-darker;
+      padding: 13px 15px;
+      white-space: nowrap;
+    }
+    p.tb {
+      background-color: transparent;
+      padding: 10px 0;
+      a {
+        padding: 10px;
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+      }
+      small {
+        color: $gray-light;
+        padding: 0 10px;
+        display: block;
+        line-height: 1.2;
+      }
+    }
+    > div {
+      padding: 0;
+      text-align: center;
+    }
+    > div:nth-child(1) {
+      text-align: left;
+      border-left: none;
+      border-right: none;
+    }
+    > div:nth-child(3) {
+      h2.th {
+        background-color: darken($theme-brand1, 3%);
+      }
+      h3.th {
+        background-color: darken($theme-brand2, 3%);
+      }
+      p.td {
+        background-color: darken($gray-lighter, 4%);
+      }
+    }
+  }
+}

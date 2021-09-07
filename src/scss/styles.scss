@@ -1,0 +1,360 @@
+  @import url('https://fonts.googleapis.com/css?family=Nunito:100,300,400,700');
+
+  @import "agency/agency";
+  @import "utilities";
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Nunito', sans-serif !important;
+  }
+
+  a {
+      color: $theme-primary;
+  }
+
+  /*a:hover,
+  a:focus,
+  a:active,
+  a.active {
+      color: $theme-secondary;
+  }*/
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+
+    &.lead {
+      font-size: 24px;
+    }
+  }
+
+  img {
+    &.bullet {
+      width: 32px;
+    }
+  }
+
+
+
+  header {
+    background-image: url('../img/scene-01-bg.png');
+
+    .intro-text {
+      min-height: 360px;
+      max-width: 800px;
+      padding: 20px 10px;
+      margin: 16% auto;
+
+      @media(min-width:768px) {
+        padding-top: 0;
+      }
+
+      .intro-thumbnail {
+        width: 55%;
+        margin: 0 auto;
+
+        @media(min-width:768px) {
+          width: 25%;
+        }
+      }
+
+      .intro-heading {
+        @include heading-font;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 25px;
+
+        @media(min-width:768px) {
+          font-size: 50px;
+          line-height: 50px;
+        }
+      }
+
+      .intro-lead-in,
+      .intro-lead-out {
+        @include serif-font;
+        font-style: normal;
+        font-weight: 100 !important;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+
+        @media(min-width:768px) {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+
+      .intro-lead-out {
+        font-size: 14px;
+        line-height: 18px;
+        color: #7EC2C3;
+
+        @media(min-width:768px) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .navbar-custom {
+    .nav {
+      li {
+        a {
+          @include heading-font;
+          font-weight: 300;
+          font-size: 18px;
+          letter-spacing: 1px;
+          color: $theme-primary;
+          text-transform: none;
+          text-shadow: none;
+          &:hover,
+          &:focus {
+            color: white;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .navbar-nav > .active > a {
+      border-radius: 0;
+      color: white;
+      background-color: transparent;
+    }
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus {
+      color: white;
+      background-color: transparent;
+    }
+
+    #logo {
+      display: block;
+      padding: 7px 17px;
+      opacity: .75;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        width: 200px;
+        padding: 5px;
+
+        @media(min-width:768px) {
+          width: 220px;
+          padding: 0;
+        }
+      }
+    }
+
+    &.affix-top {
+      #logo {
+        img {
+          width: 220px;
+
+          @media(min-width:768px) {
+            width: 230px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 0;
+
+    h2.section-heading {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.25;
+      text-transform: uppercase;
+      margin-top: 40px;
+      margin-bottom: 15px;
+
+      &.text-normal {
+        text-transform: none;
+      }
+    }
+  }
+
+  .btn-xl {
+    @include button-variant(white, $theme-primary, $theme-primary);
+    @include heading-font;
+    font-weight: 400;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 8px;
+    letter-spacing: 1px;
+  }
+
+  .btn-link {
+    @include heading-font;
+    border-color: $theme-primary;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background-color: $theme-primary;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+
+  // Services
+  @import "sections/services";
+  @import "sections/benefits";
+
+  // Pricing table
+  @import "sections/pricing";
+
+  // Frecuently Asked Questions
+  @import "sections/faq";
+
+  // Tecnologies & Cloud Partners Aside
+  @import "sections/tecnologies_partners";
+
+  // Contact
+  @import "sections/contact";
+
+
+
+  // Illustration assets
+
+  .circles {
+    width: 100%;
+    height: 100%;
+
+    .circle {
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+
+      &.type1 {
+        @include gradient-type1;
+
+        width: 15px;
+        height: 15px;
+        opacity: .1;
+
+        @media(min-width:768px) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &.type2 {
+        @include gradient-type2;
+
+        width: 50px;
+        height: 50px;
+        opacity: .1;
+
+        @media(min-width:768px) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      &.type3 {
+        @include gradient-type3;
+
+        width: 150px;
+        height: 150px;
+        opacity: .1;
+
+        @media(min-width:768px) {
+          width: 450px;
+          height: 450px;
+        }
+      }
+
+      &.type4 {
+        @include gradient-type1;
+
+        width: 150px;
+        height: 150px;
+
+        @media(min-width:768px) {
+          width: 750px;
+          height: 750px;
+        }
+      }
+    }
+  }
+
+  .coral-blue {
+    width: 24%;
+    height: auto;
+
+    @media(min-width:768px) {
+      width: 25%;
+      height: auto;
+    }
+  }
+
+  .coral-yellow {
+    width: 20%;
+    height: auto;
+
+    @media(min-width:768px) {
+      width: 20%;
+      height: auto;
+    }
+  }
+  footer {padding: 0px;}
+  footer a {color: black;}
+  footer a:hover {text-decoration: none;}
+
+  div.set-lang button {
+      background-color: transparent;
+      background: transparent;
+      text-shadow: none;
+      color: white;
+      border: none;
+      margin-top: 9px;
+      text-transform: uppercase;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+  }
+  div.set-lang button:hover,
+  div.set-lang button:active,
+  div.set-lang button:focus {
+      background: transparent;
+      color: #f9b233;
+  }
+  div.set-lang .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+      background: transparent;
+      color: #f9b233;  
+  }
+  div.set-lang .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, 
+  .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, 
+  .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, 
+  .open>.dropdown-toggle.btn-default:hover {
+      background: transparent;
+      color: #f9b233;
+  }
+
+  div.set-lang div.dropdown-menu.open{
+    background: rgba(243, 193, 102, 0.18);
+  }
+  div.set-lang ul.dropdown-menu {
+    background: transparent;
+  }
+  div.set-lang ul.dropdown-menu li a:hover,
+  div.set-lang ul.dropdown-menu li a:active,
+  div.set-lang ul.dropdown-menu li a:focus {
+    background: transparent;
+  }
+
+  div.set-lang ul.dropdown-menu span,
+   {
+    font-size: 16px;
+  }

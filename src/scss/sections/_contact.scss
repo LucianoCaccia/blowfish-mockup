@@ -1,0 +1,113 @@
+section#contact {
+  background-color: $gray-darker;
+  background-image: url('../img/scene-02-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .section-heading {
+    color: #fff;
+  }
+
+  .section-subheading {
+    font-style: normal;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    input,
+    textarea {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 18px 0;
+      border: 0;
+      border-bottom: 1px solid #4f4f4f;
+      font-size: 16px;
+      color: $gray-lighter;
+      font-weight: 300;
+    }
+    input.form-control {
+      height: auto;
+    }
+    textarea.form-control {
+      height: 100px;
+    }
+  }
+  .form-control:focus {
+    border-color: $theme-primary;
+    box-shadow: none;
+  }
+  ::-webkit-input-placeholder {
+    @include heading-font;
+    font-weight: 300;
+    color: $gray-lighter;
+    text-transform: uppercase;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    @include heading-font;
+    font-weight: 300;
+    color: $gray-lighter;
+    text-transform: uppercase;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    @include heading-font;
+    font-weight: 300;
+    color: $gray-lighter;
+    text-transform: uppercase;
+  }
+  :-ms-input-placeholder {
+    @include heading-font;
+    font-weight: 300;
+    color: $gray-lighter;
+    text-transform: uppercase;
+  }
+  .text-danger {
+    color: $theme-danger;
+  }
+
+  .contact-info {
+    @extend .m-b-lg;
+    text-align: left;
+
+    @media(min-width:992px) {
+      text-align: right;
+      margin: 0;
+    }
+
+    .logo {
+      img {
+        width: 350px;
+        margin-bottom: 10px;
+      }
+      span {
+        color: $theme-secondary;
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: $theme-secondary;
+      font-size: 18px;
+    }
+
+    a {
+      color: $theme-secondary;
+    }
+
+    a.icon {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      opacity: .75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    a.facebook {
+      width: 44px;
+    }
+  }
+}
